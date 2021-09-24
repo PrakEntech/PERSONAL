@@ -172,9 +172,9 @@ while condition=='y':
             pl=[None,None,None,"NOW"]
             cp=[None,None,None,"NOW"]
             while(cp[0]==cp[1] or cp[0]==cp[2])or cp[1]==cp[2]:
-                for i in range(3):cp[i] = pokemonList[randint(0,18)]
+                for i in range(3):cp[i] = pokemonList[randint(0,19)]
             while(pl[0]==pl[1] or pl[0]==pl[2])or pl[1]==pl[2]:
-                for i in range(3):pl[i] = pokemonList[randint(0,18)]
+                for i in range(3):pl[i] = pokemonList[randint(0,19)]
             break
         elif c==1:
             os.system('clear')
