@@ -1,32 +1,32 @@
 import os,time
 from random import randint
 
-cm=[["Flare Blitz",90,70,2,"Recoil - 33%"],
+cm=[["Flare Blitz",90,70,2,"\nRecoil - 33%"],
    ["Dragon Rage",0.4,90,5,""],
    ["Wing Attack",60,90,3,""],
-   ["Fire Fang",65,85,5,"Burned - 30%"]]
+   ["Fire Fang",65,85,5,"\nBurned - 30%"]]
 Charizard = {"speed":100, "HP":245,"HP_Cur":245, "Type":"Fire","Moves":cm}
 
 im=[["Mach Punch",40,90,5,""],
-   ["Flame Wheel",60,90,5,"Burned - 10%"],
+   ["Flame Wheel",60,90,5,"\nBurned - 10%"],
    ["Fire Spin",35,85,4,""],
    ["Acrobatics",55,90,3,""]]
 Infernape = {"speed":108, "HP":242,"HP_Cur":242, "Type":"Fire","Moves":im}
 
 mm=[["Hyper Beam",90,70,1,""],
-   ["Fire Punch",75,90,4,"Burned - 10%"],
+   ["Fire Punch",75,90,4,"\nBurned - 10%"],
    ["Ember",40,100,5,""],
-   ["Lava Plume",80,80,4,"Burned - 30%"]]
+   ["Lava Plume",80,80,4,"\nBurned - 30%"]]
 Magmortar = {"speed":83, "HP":240,"HP_Cur":240, "Type":"Fire","Moves":mm}
 
 lm=[["Leaf Blade",90,70,2,""],
-   ["Synthesis",0,100,4,"Regen - 33%"],
+   ["Synthesis",0,100,4,"\nRegen - 33%"],
    ["Quick Attack",40,100,5,""],
    ["Magical Leaf",60,90,2,""]]
 Leafeon = {"speed":95, "HP":223,"HP_Cur":223, "Type":"Grass","Moves":lm}
 
 dm=[["Sucker Punch",70,90,3,""],
-   ["Razor Leaf",55,95,3,"Critical Hit - 12.5%"],
+   ["Razor Leaf",55,95,3,"\nCritical Hit - 12.5%"],
    ["Peck",35,90,5,""],
    ["Leafage",40,90,4,""]]
 Decidueye = {"speed":70, "HP":245,"HP_Cur":245, "Type":"Grass","Moves":dm}
@@ -43,14 +43,14 @@ gm=[["Water Pulse",60,95,4,""],
    ["Quick Attack",40,100,5,""]]
 Greninja = {"speed":122, "HP":235,"HP_Cur":235, "Type":"Water","Moves":gm}
 
-gym=[["Twister",40,100,5,"Flinch - 30%"],
+gym=[["Twister",40,100,5,"\nFlinch - 30%"],
    ["Ice Fang",65,95,4,""],
    ["Aqua Tail",90,80,2,""],
    ["Blizzard",90,70,2,""]]
 Gyarados = {"speed":81, "HP":274,"HP_Cur":274, "Type":"Water","Moves":gym}
 
 bm=[["Water Gun",40,100,5,""],
-   ["Bite",60,90,4,"Flinch - 30%"],
+   ["Bite",60,90,4,"\nFlinch - 30%"],
    ["Skull Bash",90,90,2,""],
    ["Flash Cannon",80,80,2,""]]
 Blastoise = {"speed":78, "HP":247,"HP_Cur":247, "Type":"Water","Moves":bm}
@@ -58,10 +58,10 @@ Blastoise = {"speed":78, "HP":247,"HP_Cur":247, "Type":"Water","Moves":bm}
 mom=[["Gust",40,100,5,""],
    ["Ancient Power",60,90,4,""],
    ["Incinerate",60,90,2,""],
-   ["Heat Wave",95,80,1,"Burned - 10%"]]
+   ["Heat Wave",95,80,1,"\nBurned - 10%"]]
 Moltres = {"speed":90, "HP":290,"HP_Cur":290, "Type":"Fire","Moves":mom}
 
-sm=[["Extrasensory",80,90,2,"Flinch - 10%"],
+sm=[["Extrasensory",80,90,2,"\nFlinch - 10%"],
    ["Surf",90,90,2,""],
    ["Water Gun",40,100,5,""],
    ["Facade",70,90,2,""]]
@@ -73,51 +73,51 @@ fm=[["Metal Claw",50,95,4,""],
    ["Tackle",40,100,5,""]]
 Ferrothorn = {"speed":20, "HP":258,"HP_Cur":258, "Type":"Grass","Moves":fm}
 
-rm=[["Spark",65,90,4,"Flinch - 30%"],
+rm=[["Spark",65,90,4,"\nFlinch - 30%"],
    ["Zap Cannon",120,80,1,""],
-   ["Thunder Shock",40,100,5,"Flinch - 10%"],
-   ["Howl",0,100,5,"User's Attack - 10"]]
+   ["Thunder Shock",40,100,5,"\nFlinch - 10%"],
+   ["Howl",0,100,5,"\nUser's Attack - 10"]]
 Raikou = {"speed":115, "HP":290,"HP_Cur":290, "Type":"Electric","Moves":rm}
 
 manm=[["Tackle",40,100,5,""],
-   ["Discharge",80,95,2,"Flinch - 30%"],
-   ["Thunder Fang",65,95,4,"Flinch - 10%"],
+   ["Discharge",80,95,2,"\nFlinch - 30%"],
+   ["Thunder Fang",65,95,4,"\nFlinch - 10%"],
    ["Quick Attack",40,100,5,""]]
 Manectric = {"speed":105, "HP":250,"HP_Cur":250, "Type":"Electric","Moves":manm}
 
 elm=[["Rising Voltage",70,90,3,""],
    ["Thunder Punch",75,95,2,""],
    ["Quick Attack",40,100,5,""],
-   ["Thunder",110,80,2,"Flinch - 30%"]]
+   ["Thunder",110,80,2,"\nFlinch - 30%"]]
 Electivire = {"speed":95, "HP":260,"HP_Cur":260, "Type":"Electric","Moves":elm}
 
 zm=[["Pluck",60,95,4,""],
    ["Drill Peck",80,90,2,""],
    ["Zap Cannon",120,80,1,""],
-   ["Thunderbolt",90,85,3,"Flinch - 10%"]]
+   ["Thunderbolt",90,85,3,"\nFlinch - 10%"]]
 Zapdos = {"speed":100, "HP":290,"HP_Cur":290, "Type":"Electric","Moves":zm}
 
-tm=[["Rock Slide",75,90,3,"Flinch - 30%"],
-   ["Stone Edge",100,80,3,"Critical Hit - 12.5%"],
+tm=[["Rock Slide",75,90,3,"\nFlinch - 30%"],
+   ["Stone Edge",100,80,3,"\nCritical Hit - 12.5%"],
    ["Stomp",65,100,3,""],
-   ["Scary Face",0,100,5,"Decrease in Rival Pokemon's Speed by 25"]]
+   ["Scary Face",0,100,5,"\nDecrease in Rival Pokemon's Speed by 25"]]
 Tyranitar = {"speed":61, "HP":310,"HP_Cur":310, "Type":"Rock","Moves":tm}
 
-lycm=[["Howl",0,100,5,"User's Attack - 10"],
+lycm=[["Howl",0,100,5,"\nUser's Attack - 10"],
    ["Accelerock",40,100,5,""],
    ["Rock Throw",50,90,5,""],
-   ["Rock Tomb",60,95,3,"Decrease in Rival Pokemon's Speed by 15"]]
+   ["Rock Tomb",60,95,3,"\nDecrease in Rival Pokemon's Speed by 15"]]
 Lycanroc = {"speed":112, "HP":260,"HP_Cur":260, "Type":"Rock","Moves":lycm}
 
 gigam=[["Smack Down",50,95,5,""],
    ["Power Gem",80,90,3,""],
    ["Tackle",40,100,5,""],
-   ["Take Down",90,85,4,"Recoil - 25%"]]
+   ["Take Down",90,85,4,"\nRecoil - 25%"]]
 Gigalith = {"speed":25, "HP":280,"HP_Cur":280, "Type":"Rock","Moves":gigam}
 
 rhym=[["Horn Attack",65,95,3,""],
-   ["Rock Slide",75,90,3,"Flinch - 30%"],
-   ["Scary Face",0,100,5,"Decrease in Rival Pokemon's Speed by 25"],
+   ["Rock Slide",75,90,3,"\nFlinch - 30%"],
+   ["Scary Face",0,100,5,"\nDecrease in Rival Pokemon's Speed by 25"],
    ["Earthquake",100,90,2,""]]
 Rhyperior = {"speed":40, "HP":340,"HP_Cur":340, "Type":"Rock","Moves":rhym}
 
@@ -154,14 +154,11 @@ def PokeAdvan(p,x):
     elif (p-x== 1) or (p-x== -2): return -1
     else:return 0
 def lifeBar(a,b):return '|'+'_'*int(round((a/b * 20),0))+'|'
-pb,cb=[None,None],[None,None]
-pf,cf=0,0
+
 print("Pokemon Battle By - Prakhar")
 pokemonList=["Charizard","Infernape","Magmortar","Moltres","Venusaur","Leafeon","Decidueye","Ferrothorn","Blastoise","Gyarados","Greninja","Suicune","Raikou","Manectric","Electivire","Zapdos","Lycanroc","Tyranitar","Gigalith","Rhyperior"]
 pokedataList=[Charizard,Infernape,Magmortar,Moltres,Venusaur,Leafeon,Decidueye,Ferrothorn,Blastoise,Gyarados,Greninja,Suicune,Raikou,Manectric,Electivire,Zapdos,Lycanroc,Tyranitar,Gigalith,Rhyperior]
 
-m=4
-curP,curC = None,None
 condition='y'
 while condition=='y':
     c=4
@@ -169,6 +166,8 @@ while condition=='y':
         c=int(input('0. Start\n1. List All Pokemons\n2. Exit\n'))
         if c==0:
             os.system('clear')
+            pf,cf,pb,cb=0,0,[None,None],[None,None]
+            curP,curC = None,None
             pl=[None,None,None,"NOW"]
             cp=[None,None,None,"NOW"]
             while(cp[0]==cp[1] or cp[0]==cp[2])or cp[1]==cp[2]:
@@ -231,10 +230,10 @@ while condition=='y':
             a="\n\nCPU - "+cp[-1]+'('+curC["Type"]+')'+" - "+lifeBar(curC["HP_Cur"],curC["HP"])+"("+str(curC["HP_Cur"])+"/"+str(curC["HP"])+")\n\nPLY - "+pl[-1]+'('+curP["Type"]+')'+" - "+lifeBar(curP["HP_Cur"],curP["HP"])+"("+str(curP["HP_Cur"])+"/"+str(curP["HP"])+""")
 
 Moves -
-0. """+curP["Moves"][0][0]+" - P  - "+str(curP["Moves"][0][1])+", A  - "+str(curP["Moves"][0][2])+"%, PP - "+str(curP["Moves"][0][3])+" times "+curP["Moves"][0][4]+"""
-1. """+curP["Moves"][1][0]+" - P  - "+str(curP["Moves"][1][1])+", A  - "+str(curP["Moves"][1][2])+"%, PP - "+str(curP["Moves"][1][3])+" times "+curP["Moves"][1][4]+"""
-2. """+curP["Moves"][2][0]+" - P  - "+str(curP["Moves"][2][1])+", A  - "+str(curP["Moves"][2][2])+"%, PP - "+str(curP["Moves"][2][3])+" times "+curP["Moves"][2][4]+"""
-3. """+curP["Moves"][3][0]+" - P  - "+str(curP["Moves"][3][1])+", A  - "+str(curP["Moves"][3][2])+"%, PP - "+str(curP["Moves"][3][3])+" times "+curP["Moves"][3][4]
+0. """+curP["Moves"][0][0]+" - P  - "+str(curP["Moves"][0][1])+", A  - "+str(curP["Moves"][0][2])+"%, PP - "+str(curP["Moves"][0][3])+" times"+curP["Moves"][0][4]+"""
+1. """+curP["Moves"][1][0]+" - P  - "+str(curP["Moves"][1][1])+", A  - "+str(curP["Moves"][1][2])+"%, PP - "+str(curP["Moves"][1][3])+" times"+curP["Moves"][1][4]+"""
+2. """+curP["Moves"][2][0]+" - P  - "+str(curP["Moves"][2][1])+", A  - "+str(curP["Moves"][2][2])+"%, PP - "+str(curP["Moves"][2][3])+" times"+curP["Moves"][2][4]+"""
+3. """+curP["Moves"][3][0]+" - P  - "+str(curP["Moves"][3][1])+", A  - "+str(curP["Moves"][3][2])+"%, PP - "+str(curP["Moves"][3][3])+" times"+curP["Moves"][3][4]
             print(a,end='\n')
             while True:
                 pMove=4
